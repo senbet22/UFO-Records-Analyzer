@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.5.11626.173 insiders
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UFO-Records-Analyzer", "UFO-Records-Analyzer.csproj", "{764858C3-41B6-3A32-0EA9-3C4384018006}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{764858C3-41B6-3A32-0EA9-3C4384018006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{764858C3-41B6-3A32-0EA9-3C4384018006}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{764858C3-41B6-3A32-0EA9-3C4384018006}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{764858C3-41B6-3A32-0EA9-3C4384018006}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC18026F-9DAF-473C-BFB3-9011F48BB0E7}
+	EndGlobalSection
+EndGlobal
