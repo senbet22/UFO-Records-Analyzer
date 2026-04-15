@@ -12,7 +12,7 @@ namespace UFO_Records_Analyzer.Controllers
             var reader = new CsvReader();
             var data = reader.ReadCsv("ufodata.csv");
 
-            // Select()
+            // Select() query to extract cities from the data.(First 10 cities)
             var cities = data.Select(d => d.City);
 
             Console.WriteLine("Cities:");
@@ -24,7 +24,7 @@ namespace UFO_Records_Analyzer.Controllers
             Console.WriteLine();
 
 
-            // Where()
+            // Where() query to filter sightings in the US.
             var usSightings = data.Where(d => d.Country == "us");
 
             Console.WriteLine("US Sightings:");

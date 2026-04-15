@@ -6,27 +6,35 @@ Simple C# MVC project for analyzing UFO sightings data using LINQ. The program r
  
 Dataset: [NUFORC UFO Sightings – Kaggle](https://www.kaggle.com/datasets/NUFORC/ufo-sightings)
  
-## Features i will add
+## Features
  
-- Read CSV file using `System.IO`
-- Map data to C# model
+- Reads `ufodata.csv` using `System.IO`
+- Maps CSV rows to a `UfoSighting` model
 - LINQ queries:
-  - `Select()`
-  - `Where()`
-  - `OrderBy()` (optional)
- 
-## Structure
- 
-- **Model** – represents a UFO record
-- **Reader** – reads and parses CSV
-- **Controller** – runs queries and handles logic
- 
+  - `Select()` — extracts a list of cities from the dataset
+  - `Where()` — filters sightings by country (e.g. US only)
+  - Date range filter — returns sightings between two dates
+
 
  
+## Structure
+
+- **Model** – represents a UFO sighting record
+- **Service** – reads and parses the CSV file
+- **Controller** – runs queries and prints results to the console
+ 
+
 ## Requirements
  
 - .NET / C# 10.0+
-- 
+
+## How to Run
+
+```bash
+git clone https://github.com/senbet22/UFO-Records-Analyzer.git
+cd UFO-Records-Analyzer
+dotnet run
+``` 
 ## Flow Chart
 <img src="public/flowchart.png" alt="CustomGoodMorningApp
  Flow Chart" width="720"/>
