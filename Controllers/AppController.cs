@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
 using UFO_Records_Analyzer.Services;
 
 namespace UFO_Records_Analyzer.Controllers
@@ -10,7 +8,16 @@ namespace UFO_Records_Analyzer.Controllers
         public void Run()
         {
             var reader = new CsvReader();
-            var data = reader.ReadCsv("ufodata.csv");
+
+            string filePath = "ufodata.csv";
+
+            if (!File.Exists(filePath))
+            {
+                Console.WriteLine($"Error: File not found -> {filePath}");
+                return;
+            }
+
+            var data = reader.ReadCsv(filePath);
 
             // Select() query to extract cities from the data.(First 10 cities)
             var cities = data.Select(d => d.City);
@@ -23,7 +30,6 @@ namespace UFO_Records_Analyzer.Controllers
 
             Console.WriteLine();
 
-
             // Where() query to filter sightings in the US.
             var usSightings = data.Where(d => d.Country == "us");
 
@@ -32,9 +38,6 @@ namespace UFO_Records_Analyzer.Controllers
             {
                 Console.WriteLine($"{sighting.City}, {sighting.State}");
             }
-
-
-
 
             // Filtering by date range. (year, month, day)
             Console.WriteLine("Filtered Data by Date Range:");
@@ -48,7 +51,6 @@ namespace UFO_Records_Analyzer.Controllers
             {
                 Console.WriteLine($"{record.DateTime}: {record.City}, {record.Country}");
             };
-
 
             // Demonstration of Select() and Distinct() to find unique countries in the dataset.
             Console.WriteLine("Unique Countries: in the Dataset");
