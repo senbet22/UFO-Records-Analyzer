@@ -31,8 +31,6 @@ Dataset: [NUFORC UFO Sightings – Kaggle](https://www.kaggle.com/datasets/NUFOR
 ## How to Run
 
 ```bash
-git clone https://github.com/senbet22/UFO-Records-Analyzer.git
-cd UFO-Records-Analyzer
 dotnet run
 ``` 
 ## Flow Chart
