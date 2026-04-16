@@ -14,6 +14,7 @@ Dataset: [NUFORC UFO Sightings – Kaggle](https://www.kaggle.com/datasets/NUFOR
   - `Select()` — extracts a list of cities from the dataset
   - `Where()` — filters sightings by country (e.g. US only)
   - Date range filter — returns sightings between two dates
+  - `Distinct()` - used to find what countries are listed in the Dataset.
 
 
  
