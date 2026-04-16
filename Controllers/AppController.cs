@@ -37,6 +37,7 @@ namespace UFO_Records_Analyzer.Controllers
 
 
             // Filtering by date range. (year, month, day)
+            Console.WriteLine("Filtered Data by Date Range:");
             DateTime startDate = new DateTime(1998, 6, 7);
             DateTime endDate = new DateTime(1998, 6, 8);
             var filteredData = data
@@ -47,6 +48,17 @@ namespace UFO_Records_Analyzer.Controllers
             {
                 Console.WriteLine($"{record.DateTime}: {record.City}, {record.Country}");
             };
+
+
+            // Demonstration of Select() and Distinct() to find unique countries in the dataset.
+            Console.WriteLine("Unique Countries: in the Dataset");
+            var uniqueCountries = data.Select(d => d.Country).Distinct();
+
+            Console.WriteLine("Countries:");
+            foreach (var country in uniqueCountries)
+            {
+                Console.WriteLine(country);
+            }
         }
     }
 }
