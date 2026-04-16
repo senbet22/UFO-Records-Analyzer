@@ -2,7 +2,7 @@
  
 ## Description
  
-Simple C# MVC project for analyzing UFO sightings data using LINQ. The program reads a CSV file, converts rows into C# objects, and performs basic queries.
+C# MVC project for analyzing UFO sightings data using LINQ. The program reads a CSV file, converts rows into C# objects, and performs basic queries.
  
 Dataset: [NUFORC UFO Sightings – Kaggle](https://www.kaggle.com/datasets/NUFORC/ufo-sightings)
  
